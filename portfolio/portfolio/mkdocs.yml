@@ -8,7 +8,7 @@ theme:
 
 nav:
   - Home: index.md
-  - Esperienze lavorative: esperienze.md
+  - Le mie esperienze: esperienze.md
   - I miei obiettivi: obiettivi.md
   - Altro: info.md
 
