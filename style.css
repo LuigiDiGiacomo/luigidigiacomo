@@ -450,3 +450,37 @@ nav.md-nav--primary {
   font-weight: 400;
   color: var(--ld-text-soft);
 }
+
+.home-hero {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+/* immagine 700x700 (massimo) */
+.home-hero__img {
+  width: 700px;
+  height: 700px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid var(--ld-border-subtle);
+}
+
+/* testo a destra, che si restringe se serve */
+.home-hero__text {
+  flex: 1;
+}
+
+/* layout verticale su schermi piccoli */
+@media (max-width: 900px) {
+  .home-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .home-hero__img {
+    width: 100%;
+    height: auto;
+  }
+}
