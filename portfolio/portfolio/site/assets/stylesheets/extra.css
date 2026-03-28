@@ -1,32 +1,32 @@
-/* === Ricerca: allineata ai colori del sito === */
+/* Ricerca — allineata alla palette LD */
 
-/* Barra in alto (come la navbar) */
+/* Barra in alto (come header/nav) */
 .md-search__form,
 .md-search__input {
-  background-color: #020617 !important;   /* sfondo molto scuro */
-  color: #f9fafb !important;              /* testo chiaro */
+  background-color: var(--ld-header) !important;
+  color: var(--ld-text-main) !important;
 }
 
 .md-search__input::placeholder {
-  color: #9ca3af !important;              /* grigio medio */
+  color: var(--ld-text-muted) !important;
 }
 
-/* Contenitore risultati (come il body, un filo più chiaro) */
+/* Contenitore risultati (come sfondo principale) */
 .md-search__scrollwrap {
-  background-color: #111827 !important;
+  background-color: var(--ld-bg) !important;
 }
 
-/* Testo "1 documento trovato", "Scrivi per iniziare a cercare" ecc. */
+/* Testo meta ("1 documento trovato", "Scrivi per iniziare a cercare") */
 .md-search-result__meta {
-  color: #e5e7eb !important;
+  color: var(--ld-text-soft) !important;
 }
 
-/* Titoli delle pagine nei risultati */
+/* Titoli delle pagine trovate */
 .md-search-result__title {
-  color: #f9fafb !important;
+  color: var(--ld-text-main) !important;
 }
 
-/* Testo descrittivo/anteprima */
+/* Testo di anteprima */
 .md-search-result__teaser {
-  color: #d1d5db !important;
+  color: var(--ld-text-soft) !important;
 }
