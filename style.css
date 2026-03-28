@@ -336,3 +336,71 @@ nav.md-nav--primary {
   border-color: var(--ld-green-light);
   color: var(--ld-white);
 }
+
+/* ====== POPUP ALTRO (solo CSS con :target) ====== */
+
+/* link che apre il popup */
+.ld-popup-link {
+  color: var(--ld-green-light);
+  border-bottom: 1px dashed rgba(34, 197, 94, 0.6);
+  cursor: pointer;
+}
+
+/* contenitore base (nascosto) */
+.ld-popup {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 40;
+}
+
+/* quando il target è attivo (es. #popup-musica nella URL) */
+.ld-popup:target {
+  display: block;
+}
+
+/* sfondo scuro semi-trasparente */
+.ld-popup__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+/* box centrale */
+.ld-popup__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 420px;
+  width: 90%;
+  background: var(--ld-bg);
+  color: var(--ld-text-soft);
+  border-radius: 12px;
+  border: 1px solid var(--ld-border-subtle);
+  padding: 1.2rem 1.4rem 1.1rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* titolo e testo */
+.ld-popup__content h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--ld-white);
+}
+
+.ld-popup__content p {
+  margin: 0;
+}
+
+/* bottone chiudi */
+.ld-popup__close {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  border: none;
+  background: transparent;
+  color: var(--ld-text-muted);
+  cursor: pointer;
+  font-size: 1.1rem;
+}
