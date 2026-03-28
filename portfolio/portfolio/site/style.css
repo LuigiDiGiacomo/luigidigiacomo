@@ -3,30 +3,32 @@
    Single Gray Background + Mono Green (nav uniformi)
    ============================================================ */
 
+
 /* --- Palette --- */
 :root {
-  --ld-bg:            #121212;   /* unico sfondo per tutto */
-  --ld-header:        #1b1b1b;   /* header leggermente diverso */
-  --ld-drawer:        #1b1b1b;   /* sfondo menu hamburger */
-  --ld-border-subtle: #262626;
+  --ld-bg:             #121212;   /* unico sfondo per tutto */
+  --ld-header:         #1b1b1b;   /* header leggermente diverso */
+  --ld-drawer:         #1b1b1b;   /* sfondo menu hamburger */
+  --ld-border-subtle:  #262626;
 
-  --ld-text-main:     #f9fafb;
-  --ld-text-soft:     #e5e7eb;
-  --ld-text-muted:    #9ca3af;
+  --ld-text-main:      #f9fafb;
+  --ld-text-soft:      #e5e7eb;
+  --ld-text-muted:     #9ca3af;
 
-  --ld-green:         #16a34a;
-  --ld-green-light:   #22c55e;
+  --ld-green:          #16a34a;
+  --ld-green-light:    #22c55e;
 
-  --ld-white:         #ffffff;
+  --ld-white:          #ffffff;
 
-  --ld-code-bg:       #1e1e1e;
-  --ld-code-fg:       #bbf7d0;
+  --ld-code-bg:        #1e1e1e;
+  --ld-code-fg:        #bbf7d0;
 }
 
 [data-md-color-scheme="default"] {
   --md-default-bg-color: var(--ld-bg);
   --md-default-fg-color: var(--ld-text-main);
 }
+
 
 /* ================== SFONDO UNICO (navbar + contenuto) ================== */
 
@@ -46,7 +48,7 @@ nav.md-nav--secondary,
   border: none !important;
 }
 
-/* Sidebar PRIMARIA (sinistra) – forza stesso colore dello sfondo */
+/* Sidebar primaria (sinistra) */
 .md-sidebar--primary,
 .md-sidebar--primary .md-sidebar__scrollwrap,
 .md-sidebar--primary .md-sidebar__inner,
@@ -55,6 +57,7 @@ nav.md-nav--primary {
   box-shadow: none !important;
   border: none !important;
 }
+
 
 /* ================== HEADER ================== */
 
@@ -71,6 +74,7 @@ nav.md-nav--primary {
   color: var(--ld-white) !important;
 }
 
+
 /* ================== MENU HAMBURGER / MOBILE DRAWER ================== */
 
 .md-nav--primary,
@@ -80,6 +84,7 @@ nav.md-nav--primary {
 .md-nav {
   background-color: var(--ld-drawer) !important;
 }
+
 
 /* ================== NAVBAR / INDICE ================== */
 
@@ -118,6 +123,7 @@ nav.md-nav--primary {
   border-left-color: rgba(148, 163, 184, 0.6) !important;
 }
 
+
 /* ================== TESTO E TITOLI ================== */
 
 .md-typeset h1 {
@@ -135,13 +141,16 @@ nav.md-nav--primary {
   margin-top: 2rem;
 }
 
-.md-typeset h3 { color: var(--ld-green); }
+.md-typeset h3 {
+  color: var(--ld-green);
+}
 
 .md-typeset p,
 .md-typeset li {
   color: var(--ld-text-soft);
   line-height: 1.8;
 }
+
 
 /* ================== LINK ================== */
 
@@ -156,6 +165,7 @@ nav.md-nav--primary {
   border-bottom: 1px solid var(--ld-green);
   color: var(--ld-green-light);
 }
+
 
 /* ================== CODICE ================== */
 
@@ -173,6 +183,7 @@ nav.md-nav--primary {
   border-radius: 6px;
 }
 
+
 /* ================== BLOCKQUOTE ================== */
 
 .md-typeset blockquote {
@@ -183,6 +194,7 @@ nav.md-nav--primary {
   color: var(--ld-text-muted);
   font-style: italic;
 }
+
 
 /* ================== FOOTER ================== */
 
@@ -229,6 +241,7 @@ nav.md-nav--primary {
   }
 }
 
+
 /* ================== TABELLE ================== */
 
 .md-typeset table {
@@ -250,16 +263,23 @@ nav.md-nav--primary {
   color: var(--ld-text-soft);
 }
 
+
 /* ================== SCROLLBAR ================== */
 
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--ld-bg); }
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ld-bg);
+}
+
 ::-webkit-scrollbar-thumb {
   background: var(--ld-green);
   border-radius: 3px;
 }
 
-/* Fix definitivo nav sinistra: stesso sfondo dello sfondo principale */
+/* Fix nav sinistra */
 .md-sidebar--primary,
 .md-sidebar--primary > .md-sidebar__scrollwrap,
 .md-sidebar--primary .md-sidebar__inner,
@@ -273,7 +293,7 @@ nav.md-nav--primary {
   border: none !important;
 }
 
-/* Scrollbar verticale dentro il pannello di ricerca */
+/* Scrollbar ricerca */
 .md-search__scrollwrap::-webkit-scrollbar {
   width: 6px;
 }
@@ -291,22 +311,20 @@ nav.md-nav--primary {
   background: var(--ld-green-light);
 }
 
-/* Supporto standard (Firefox, ecc.) */
 .md-search__scrollwrap {
   scrollbar-width: thin;
   scrollbar-color: var(--ld-green) var(--ld-bg);
 }
 
-/* Quando è in hover/focus, usa il verde chiaro, non il blu del tema */
 .md-search__scrollwrap:hover {
   scrollbar-color: var(--ld-green-light) var(--ld-bg);
 }
 
+
 /* ================== BOTTONI / CTA ================== */
 
-/* Base button */
 .md-typeset .md-button {
-  border-radius: 999px;                 /* pill shape */
+  border-radius: 999px;
   border: 1px solid var(--ld-green);
   color: var(--ld-green-light);
   background: transparent;
@@ -316,28 +334,26 @@ nav.md-nav--primary {
   letter-spacing: 0.02em;
 }
 
-/* Hover stato base */
 .md-typeset .md-button:hover {
   background: rgba(22, 163, 74, 0.12);
   border-color: var(--ld-green-light);
   color: var(--ld-green-light);
 }
 
-/* Primary (pieno) */
 .md-typeset .md-button--primary {
   background: var(--ld-green);
   color: var(--ld-white);
   border-color: var(--ld-green);
 }
 
-/* Hover primary */
 .md-typeset .md-button--primary:hover {
   background: var(--ld-green-light);
   border-color: var(--ld-green-light);
   color: var(--ld-white);
 }
 
-/* ====== POPUP ALTRO (solo CSS con :target) ====== */
+
+/* ================== POPUP (CSS con :target) ================== */
 
 /* link che apre il popup */
 .ld-popup-link {
@@ -346,7 +362,7 @@ nav.md-nav--primary {
   cursor: pointer;
 }
 
-/* contenitore base (nascosto) */
+/* contenitore base nascosto */
 .ld-popup {
   position: fixed;
   inset: 0;
@@ -354,12 +370,12 @@ nav.md-nav--primary {
   z-index: 40;
 }
 
-/* quando il target è attivo (es. #popup-musica nella URL) */
+/* quando è in :target */
 .ld-popup:target {
   display: block;
 }
 
-/* sfondo scuro semi-trasparente */
+/* sfondo scuro */
 .ld-popup__backdrop {
   position: absolute;
   inset: 0;
@@ -382,7 +398,7 @@ nav.md-nav--primary {
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
 }
 
-/* titolo e testo */
+/* titolo popup */
 .ld-popup__content h3 {
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -405,37 +421,13 @@ nav.md-nav--primary {
   font-size: 1.1rem;
 }
 
-/* ====== CARD FILM NEL POPUP ====== */
 
-.ld-movie-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
-  margin-top: 0.7rem;
-}
-
-.ld-movie {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
+/* ====== FILM NEL POPUP: ICONA TONDA + TITOLO ====== */
 
 .ld-movie__img {
-  width: 52px;
-  height: 52px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid var(--ld-green);
-}
-
-.ld-movie__info h4 {
-  margin: 0;
-  font-size: 0.98rem;
-  color: var(--ld-text-soft);
-}
-
-.ld-movie__info p {
-  margin: 0.1rem 0 0;
-  font-size: 0.86rem;
-  color: var(--ld-text-muted);
+  border: 3px solid var(--ld-green);
 }
